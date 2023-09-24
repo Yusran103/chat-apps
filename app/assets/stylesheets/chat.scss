@@ -1,0 +1,93 @@
+$white: #fff !default;
+$black: #4c4e64 !default;
+$gray-25: rgba($black, 0.015) !default; // (C)
+$gray-50: rgba($black, 0.03) !default; // (C)
+$gray-100: rgba($black, 0.06) !default;
+$gray-200: rgba($black, 0.12) !default;
+$gray-300: rgba($black, 0.22) !default;
+$gray-400: rgba($black, 0.38) !default;
+$gray-500: rgba($black, 0.5) !default;
+$gray-600: rgba($black, 0.6) !default;
+$gray-700: rgba($black, 0.7) !default;
+$gray-800: rgba($black, 0.8) !default;
+$gray-900: rgba($black, 0.87) !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start gray-colors-map
+$grays: (
+  '25': $gray-25,
+  '50': $gray-50
+) !default;
+// scss-docs-end gray-colors-map
+
+// scss-docs-start color-variables
+$blue: #26c6f9 !default;
+$indigo: #666cff !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #ff4d49 !default;
+$orange: #fdb528 !default;
+$yellow: #ffd950 !default;
+$green: #72e128 !default;
+$teal: #20c997 !default;
+$cyan: #28c3d7 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start theme-color-variables
+$primary: $indigo !default;
+$secondary: #6d788d !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: #dfdfe3 !default;
+$dark: #4b4b4b !default;
+$gray: $gray-100 !default; // (C)
+
+.avatar {
+    max-height:30px;
+    border-radius: 15px;
+    width:auto;
+    vertical-align:middle;
+}
+
+.room-nav-link {
+    border: 1px solid lighten($primary, 40%);
+    background: lighten($primary, 45%);
+  
+    & + .room-nav-link {
+      border-top: 0 none;
+    }
+}
+
+.chat {
+    border: 1px solid lighten($secondary, 40%);
+    background: lighten($secondary, 50%);
+    height: 50vh;
+    border-radius: 5px 5px 0 0;
+    overflow-y: auto;
+}
+  
+.chat-input {
+border-top: 0 none;
+border-radius: 0 0 5px 5px;
+}
+.chat-message-container {
+padding: 5px;
+
+.avatar {
+    margin: 5px;
+}
+
+.message-content {
+    padding: 5px;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    background: lighten($primary, 10%);
+    color: $white;
+}
+
+& + .chat-message-container {
+    margin-top: 10px;
+}
+}
